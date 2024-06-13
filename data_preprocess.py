@@ -1,13 +1,12 @@
-import scipy.io as sio
+import argparse 
 import os
 import numpy as np
+import scipy.io as sio
 from tqdm import tqdm
-import argparse 
 
 
 parser=argparse.ArgumentParser()
 parser.add_argument('--Dataset_path',action='store',type=str,default='./Datasets',required=False,help='the datasets path')
-parser.add_argument('--data_name',action='store',type=str,default='PaviaU',required=False,help='IndianPines|PaviaU|Salinas|Houston2013')
 pargs=parser.parse_args()
 
 Dataset_path=pargs.Dataset_path
@@ -85,7 +84,7 @@ def precessfun(data_name):
 
 
 if __name__=='__main__':
-    data_name=['IndianPines','PaviaU','Salinas','Houston2013'][1]
+    data_name=['IndianPines','PaviaU','Salinas','Houston2013'][2]
     print(data_name)
     precessfun(data_name)
     print('end')
