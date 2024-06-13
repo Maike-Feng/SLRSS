@@ -29,12 +29,12 @@ basedir=os.path.join(root_dir,'MT')  # 不同方法的文件夹
 # python ./MT/MTnet_2sCE.py --data_name IndianPines --batch_size 1024 --train_size 5 
 parser=argparse.ArgumentParser()
 parser.add_argument('--device',action='store',type=str,default='cuda:0',required=False,help='cpu|cuda:0')
-parser.add_argument('--seed',type=int,default=2021,required=False,help='random seed')
+parser.add_argument('--seed',type=int,default=2024,required=False,help='random seed')
 parser.add_argument('--isTest',action='store_true',required=False,help='test or train flag')
 # 数据、训练相关参数
 parser.add_argument('--Dataset_path',action='store',type=str,default=os.path.join(root_dir,'Datasets'),required=False,help='the datasets path')
 parser.add_argument('--result_path',action='store',type=str,default=os.path.join(root_dir,'results'),required=False,help='the datasets path')
-parser.add_argument('--data_name',action='store',type=str,default='PaviaU',required=False,help='IndianPines|PaviaU|Salinas|Houston2013|LongKou')
+parser.add_argument('--data_name',action='store',type=str,default='Salinas',required=False,help='IndianPines|PaviaU|Salinas|Houston2013|LongKou')
 parser.add_argument('--runs',type=int,default=5,required=False,help='repeat run several times')
 # -1 表示未指定，将在Args初始化时使用默认值
 parser.add_argument('--batch_size',type=int,default='-1',required=False,help='batch_size')
@@ -56,7 +56,7 @@ np.random.seed(seed)
 torch.manual_seed(seed)
 device=pargs.device
 if not torch.cuda.is_available():
-        device='cpu'
+    device='cpu'
 
 def preprocess(dataset, normalization = 2):
     '''
