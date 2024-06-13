@@ -7,7 +7,7 @@
 <div aligh=center witdh="200"><img src="Network Architecture.png"></div>
 
 ## What is this repository for?
-SLRSS is a software for Semi-supervised Learning Combined with Regression Pre-training of Siamese Network Based on Superpixel Segmentation for HSI Classification.
+This is the PyTorch implementation for **Semi-supervised Learning Combined with Regression Pre-training of Siamese Network Based on Superpixel Segmentation for HSI Classification**.
 
 ## Usage
 
