@@ -33,7 +33,7 @@ This is the PyTorch implementation for **Semi-supervised Learning Combined with 
 (4)、Run the `data_preprocess.py` file to achieve the fusion of the newly obtained superpixel data. And then we will get the file `Salinas_edgelabels.mat`.
 ```
 ## 3. Training and Prediction:
-Train the model and obtain the results, just run the file `SLRSS.py`
+Train the model and obtain the results, just run following command in terminal.
 ```shell
 # Training on Salinas dataset
 python SLRSS.py --data_name Salinas
